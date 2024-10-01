@@ -1,4 +1,4 @@
-export function Welcome(){
+export function WelcomeTitle(){
     return(
         <>
             <h1>Välkommen</h1>

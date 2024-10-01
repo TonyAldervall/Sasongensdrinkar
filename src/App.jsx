@@ -1,13 +1,13 @@
-import { Welcome } from './Welcome';
+import { WelcomeTitle } from './WelcomeTitle';
 import { RecipeSection } from './RecipeSection';
-import { RecipeButton } from './RecipeButton';
+import { AddRecipeButton } from './AddRecipeButton';
 
 function App() {
   return (
     <>
-      <Welcome></Welcome>
+      <WelcomeTitle></WelcomeTitle>
       <RecipeSection></RecipeSection>
-      <RecipeButton></RecipeButton>
+      <AddRecipeButton></AddRecipeButton>
     </>
   );
 }
