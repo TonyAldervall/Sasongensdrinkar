@@ -1,23 +1,15 @@
-import { RecipeSection } from './Recipesection';
+import { Welcome } from './Welcome';
+import { RecipeSection } from './RecipeSection';
+import { RecipeButton } from './RecipeButton';
 
 function App() {
-  
-  
-  const handlePostData = async () => {
-    const result = await postRecipe(newRecipe);
-    setData([...data, result]);
-  };
-
   return (
     <>
-      <h1>Välkommen</h1>
-      <h2>Bästa receptsidan.</h2>
+      <Welcome></Welcome>
       <RecipeSection></RecipeSection>
-      <button onClick={handlePostData}>Add New Recipe</button>
+      <RecipeButton></RecipeButton>
     </>
   );
 }
-
-
 
 export default App;
