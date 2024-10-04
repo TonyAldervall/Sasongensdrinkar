@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData } from './fetch';
+import { fetchData } from '../utils/fetch';
 
 
 export function RecipeSection() {

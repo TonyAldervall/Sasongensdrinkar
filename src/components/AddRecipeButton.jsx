@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData, postRecipe } from "./fetch";
+import { fetchData, postRecipe } from "../utils/fetch";
 
 export function AddRecipeButton(){
     const [data, setData] = useState([]);
