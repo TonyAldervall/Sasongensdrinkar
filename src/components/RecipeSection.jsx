@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchData } from '../utils/fetch';
+import '../styles/recipe-section.css';
 
 
 export function RecipeSection() {
@@ -18,10 +19,15 @@ export function RecipeSection() {
       <>
         {data.length > 0 &&
           data.map((recipe, index) => (
-            <div className='RecipeCard' key={index}>
-              <h2> {recipe.title}</h2>
-              <h4> {recipe.description}</h4>
-              <h5> {recipe.price} kr</h5>
+            <div className='recipe-card-container' key={index}>
+              <div className='recipe-card-image'>
+                <img src={recipe.imageUrl} alt={`Picture for ${recipe.title}`} />
+              </div>
+              <div className='recipe-card-text'>
+                <h2> {recipe.title}</h2>
+                <h4> {recipe.description}</h4>
+                <h5> {recipe.price} kr</h5>
+              </div>
             </div>
           ))}
       </>
