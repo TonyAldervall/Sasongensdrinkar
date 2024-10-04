@@ -1,13 +1,16 @@
 import { WelcomeTitle } from './WelcomeTitle';
 import { RecipeSection } from './RecipeSection';
 import { AddRecipeButton } from './AddRecipeButton';
+import SearchBar from './components/SearchBar';
+
 
 function App() {
   return (
     <>
-      <WelcomeTitle></WelcomeTitle>
-      <RecipeSection></RecipeSection>
-      <AddRecipeButton></AddRecipeButton>
+      <SearchBar />
+      <WelcomeTitle />
+      <RecipeSection />
+      <AddRecipeButton />
     </>
   );
 }
