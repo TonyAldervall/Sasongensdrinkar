@@ -4,9 +4,10 @@
     align-items: center;
     background-color: rgb(227, 192, 255);
     color: white;
-    padding: 1rem;
+    padding: 10px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .home-button{
