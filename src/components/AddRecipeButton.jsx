@@ -13,13 +13,13 @@ export function AddRecipeButton(){
     });
 
     const [newRecipe, setNewRecipe] = useState({
-        "title": "TEST 3",
-        "description": "Mycket billig",
+        "title": "Vinter Drinken",
+        "description": "Röd och härlig",
         "ratings": [],
-        "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_223427/cf_259/korvstroganoff_med_ris.jpg",
+        "imageUrl": "https://www.cocktailia.se/images/74/gnynv2-how-to-kill-a-friend-tropisk-drink-med-mezcal-cocktailiase-960x800_109x64.jpg",
         "timeInMins": 15,
-        "price": 5,
-        "categories": ["Förrätt", "Skaldjur", "Smaskigt"],
+        "price": 40,
+        "categories": ["Förrätt", "Skaldjur", "Vinter"],
         "instructions": ["Stek brödet", "Lägg på röran", "Toppa med Dill"],
         "ingredients": [
             { "name": "Salt", "amount": 1, "unit": "tsk" },
