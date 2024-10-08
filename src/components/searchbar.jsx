@@ -27,7 +27,6 @@ function SearchBar() {
 
   return (
     <div className="search-container">
-      <h1>Sök recept</h1>
       <div className="search">
         <TextField
           id="outlined-basic"
@@ -38,7 +37,7 @@ function SearchBar() {
           onChange={handleSearchChange}
         />
       </div>
-      <SearchResults results={results} />
+      <SearchResults results={results} searchTerm={searchTerm} />
     </div>
   );
 }

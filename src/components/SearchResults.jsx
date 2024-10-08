@@ -1,16 +1,19 @@
 import React from "react";
 
-function SearchResults({ results }) {
+function SearchResults({ results, searchTerm }) {
   return (
     <div className="results">
       {results.length > 0 ? (
-        <ul>
+        <ul className="results-list">
           {results.map((result, index) => (
-            <li key={index}>{result.name}</li> 
+            <li key={index} className="results-item">
+              {result.name}
+            </li>
           ))}
         </ul>
       ) : (
-        <p>Inga resultat var hittad</p>
+
+        searchTerm && <p className="no-results">Inga resultat var hittad</p>
       )}
     </div>
   );
