@@ -22,7 +22,7 @@ const CategorySection = ({ category }) => {
   return (
     <div className="category-section">
 
-      <div className="category-header">
+      <div className="category-header" id={`category-${category}`}>
         <h2 className='category-title'>{category}drinkar</h2>
         <Link to={`/category/${category}`} className='category-link'>Visa fler...</Link>
       </div>
