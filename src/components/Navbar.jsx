@@ -9,16 +9,11 @@ import DropDown from './Dropdown';
 function Navbar() {
     return (
         <div className='navbar'>
-            <div className='navbar-left'>
-                <NavLink to='/' className='home-button'>
-                    <img className='logo' src={logo} alt="Logo" />
-                </NavLink>
-                <DropDown />
-
-            </div>
-            <div className='navbar-right'>
-            </div>
+            <NavLink to='/' className='home-button'>
+                <img className='logo' src={logo} alt="Logo" />
+            </NavLink>
             <SearchBar />
+            <DropDown />
         </div>
     );
 }
