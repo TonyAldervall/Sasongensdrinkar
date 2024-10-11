@@ -14,10 +14,11 @@ function Navbar() {
                     <img className='logo' src={logo} alt="Logo" />
                 </NavLink>
                 <DropDown />
+
             </div>
             <div className='navbar-right'>
-                <SearchBar />
             </div>
+            <SearchBar />
         </div>
     );
 }
