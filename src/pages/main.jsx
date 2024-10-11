@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './Home.jsx'
 import Category from './Category.jsx';
 import Recipe from './Recipe.jsx';
+import Search from './Search.jsx';
 import '../styles/index.css'
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/recipe/:recipeId",
     element: <Recipe />,
+  },
+  {
+    path: "/search/:searchTerm",
+    element: <Search />,
   }
 ]);
 

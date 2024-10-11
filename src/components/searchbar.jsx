@@ -1,29 +1,37 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import SearchResults from "./SearchResults.jsx";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [results, setResults] = useState([]);
+  const navigate = useNavigate();
+  // const [results, setResults] = useState([]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  useEffect(() => {
-    if (searchTerm) {
-      const fetchData = async () => {
-        const response = await fetch(
-          `https://recept5-kivel.reky.se/api/recipes?search=${searchTerm}`
-        );
-        const data = await response.json();
-        setResults(data); 
-      };
-      fetchData();
-    } else {
-      setResults([]);
+  const handleKeyPress = (event) => {
+    if(event.key === "Enter" && searchTerm.trim()) {
+      navigate(`/search/${searchTerm}`);
     }
-  }, [searchTerm]);
+  }
+
+  // useEffect(() => {
+  //   if (searchTerm) {
+  //     const fetchData = async () => {
+  //       const response = await fetch(
+  //         `https://recept5-kivel.reky.se/api/recipes?search=${searchTerm}`
+  //       );
+  //       const data = await response.json();
+  //       setResults(data); 
+  //     };
+  //     fetchData();
+  //   } else {
+  //     setResults([]);
+  //   }
+  // }, [searchTerm]);
 
   return (
     <div className="search-container">
@@ -35,9 +43,10 @@ function SearchBar() {
           label="Sök recept"
           value={searchTerm}
           onChange={handleSearchChange}
+          onKeyDown={handleKeyPress}
         />
       </div>
-      <SearchResults results={results} searchTerm={searchTerm} />
+      {/* <SearchResults results={results} searchTerm={searchTerm} /> */}
     </div>
   );
 }

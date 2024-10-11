@@ -4,15 +4,17 @@ import DrinkResultSection from '../components/DrinkResultSection';
 import Navbar from '../components/Navbar';
 
 
-function Category() {
-    const { categoryId } = useParams();
+function Search() {
+    const { searchTerm } = useParams();
 
+    console.log(searchTerm);
+    
   return (
     <>
       <Navbar/>
-      <DrinkResultSection category={categoryId}/>
+      <DrinkResultSection searchTerm={searchTerm} category={null}/>
     </>
   );
 }
 
-export default Category;
+export default Search;
