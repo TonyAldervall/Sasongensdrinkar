@@ -30,25 +30,35 @@ const DrinkResultSection = ({ category, searchTerm}) => {
         getData();
     }, [category, searchTerm]);
 
-  return (
-    <div className="category-section">
 
-        {filteredData.map((drink, index) => (
-        <div className='drink-card' key={index}>
+    return (
+        <div className="category-section">
+            {filteredData.length === 0 ? (
+                <p className='no-match'>No matches were found for search: "{searchTerm}".</p>
+            ) : (
+                filteredData.map((drink, index) => (
+                    <div className='drink-card' key={index}>
+                        <Link to={`/recipe/${drink._id}`} className='drink-link'>
+                            <div className='drink-image-container'>
+                                <img src={drink.imageUrl} alt={`Picture for ${drink.title}`} />
+                            </div>
+                            <div className='drink-details-container'>
+                                <h2 className='drink-title'>{drink.title}</h2>
+                                <p>{drink.description}</p>
 
-            <Link to={`/recipe/${drink._id}`} className='drink-link'>
-                <div className='drink-image-container'>
-                    <img src={drink.imageUrl} alt={`Picture for ${drink.title}`} />
-                </div>
+                                <p>Ingredienser:</p>
+                                {drink.ingredients.map((ingredient, index) => (
+                                    <p key={index}>{ingredient.name}</p>
+                                ))}
 
-                <div className='drink-details-container'>
-                    <h2 className='drink-title'>{drink.title}</h2>
-                </div>
-            </Link>
+                                <p>Tid: {drink.timeInMins} min</p>
+                            </div>
+                        </Link>
+                    </div>
+                ))
+            )}
         </div>
-        ))}
-    </div>
-  );
+    );
 };
 
 export default DrinkResultSection;
