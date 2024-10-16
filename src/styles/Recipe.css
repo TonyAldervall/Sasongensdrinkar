@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 15px;
+    margin: 10px;
 }
 
 .instructions ul{
@@ -83,7 +83,8 @@
     background-color: rgb(249, 248, 248);
     box-shadow: 5px 5px 8px rgb(207, 207, 207);
     border-radius: 5px;
-    width: fit-content;
+    min-width: fit-content;
+
 }
 
 span{
@@ -109,6 +110,7 @@ span{
 
 li input[type="checkbox"]:checked + span{
     color: rgb(147, 147, 147);
+    text-decoration: line-through;
 }
 
 .box:hover{
