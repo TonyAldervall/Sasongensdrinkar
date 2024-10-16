@@ -1,6 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Ingredients from '../components/Ingredients';
+import Navbar from '../components/Navbar';
+import Instructions from '../components/Instructions';
+import '../styles/Recipe.css';
 
 
 function Recipe() {
@@ -8,8 +11,12 @@ function Recipe() {
 
   return (
     <>
+      <Navbar />
       <h1>Hello {recipeId}!</h1>
-      <Ingredients />
+      <div className='recipeContainer'>
+        <Ingredients />
+        <Instructions />
+      </div>
     </>
   );
 }
