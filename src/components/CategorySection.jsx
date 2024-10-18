@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchData } from '../utils/fetch';
 import { Link } from 'react-router-dom';
 import '../styles/category-section.css';
+import Difficulty from './Difficulty';
 
 const CategorySection = ({ category }) => {
     const [filteredData, setFilteredData] = useState([]);
@@ -35,8 +36,12 @@ const CategorySection = ({ category }) => {
                                 <h2 className='drink-title'>{drink.title}</h2>
                             </div>
                             <div className="drink-extra-details">
-                                <p>Antal tid: {drink.timeInMins} minuter</p>
+                                <p><strong>Icon1</strong> {drink.timeInMins} min</p>
                                 <p>Ingredienser: {drink.ingredients.length}</p>
+                                <Difficulty 
+                                nrIngredients={drink.ingredients.length} 
+                                nrInstructions={drink.instructions.length} 
+                                />
                             </div>
                         </Link>
                     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchData } from '../utils/fetch';
 import { Link } from 'react-router-dom';
+import Difficulty from './Difficulty';
 import '../styles/drink-result-section.css';
 
 
@@ -51,7 +52,13 @@ const DrinkResultSection = ({ category, searchTerm}) => {
                                     <p key={index}>{ingredient.name}</p>
                                 ))}
 
-                                <p>Tid: {drink.timeInMins} min</p>
+                                <p><strong>Icon1</strong> {drink.timeInMins} min</p>
+
+                                <Difficulty 
+                                nrIngredients={drink.ingredients.length} 
+                                nrInstructions={drink.instructions.length} 
+                                />
+                                
                             </div>
                         </Link>
                     </div>
