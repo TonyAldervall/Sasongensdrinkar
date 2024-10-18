@@ -13,7 +13,7 @@ function Difficulty({ nrInstructions, nrIngredients}){
 
     return(
         <>
-            <p><strong>Icon2</strong> {difficulty}</p>
+            <span><strong>Icon3</strong> {difficulty}</span>
         </>
     );
 }

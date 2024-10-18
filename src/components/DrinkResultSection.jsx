@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchData } from '../utils/fetch';
 import { Link } from 'react-router-dom';
 import Difficulty from './Difficulty';
-import '../styles/drink-result-section.css';
+import '../styles/drink-card.css';
 
 
 
@@ -33,36 +33,39 @@ const DrinkResultSection = ({ category, searchTerm}) => {
 
 
     return (
-        <div className="category-section">
+        <div className="drink-result-section">
             {filteredData.length === 0 ? (
                 <p className='no-match'>No matches were found for search: "{searchTerm}".</p>
             ) : (
-                filteredData.map((drink, index) => (
-                    <div className='drink-card' key={index}>
-                        <Link to={`/recipe/${drink._id}`} className='drink-link'>
+                <div className="drink-grid">
+                    {filteredData.map((drink, index) => (
+                        <Link to={`/recipe/${drink._id}`} className='drink-card' key={index}>
                             <div className='drink-image-container'>
                                 <img src={drink.imageUrl} alt={`Picture for ${drink.title}`} />
                             </div>
+
                             <div className='drink-details-container'>
+
                                 <h2 className='drink-title'>{drink.title}</h2>
-                                <p>{drink.description}</p>
 
-                                <p>Ingredienser:</p>
-                                {drink.ingredients.map((ingredient, index) => (
-                                    <p key={index}>{ingredient.name}</p>
-                                ))}
 
-                                <p><strong>Icon1</strong> {drink.timeInMins} min</p>
+                                <div className='drink-icon-info-div'>
+                                    <span><strong>Icon1</strong> {drink.timeInMins} min</span>
+                                    <span><strong>Icon2</strong> {drink.ingredients.length}</span>
+                                    <Difficulty
+                                    nrIngredients={drink.ingredients.length}
+                                    nrInstructions={drink.instructions.length}>
+                                    </Difficulty>
+                                </div>
 
-                                <Difficulty 
-                                nrIngredients={drink.ingredients.length} 
-                                nrInstructions={drink.instructions.length} 
-                                />
-                                
+                                <div className='drink-rating-div'>
+                                    Placeholder Rating {/* Rating component that shows the average rating */}
+                                </div>
                             </div>
+
                         </Link>
-                    </div>
-                ))
+                    ))}
+                </div>
             )}
         </div>
     );
