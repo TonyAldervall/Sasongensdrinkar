@@ -9,9 +9,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  max-width: 1280px;
+  margin: auto;
+  background-color: white;
+}
+
 body {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
   text-align: center; 
+  background-color: rgba(227, 192, 255, 0.37);
 }
