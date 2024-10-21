@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import '../styles/drink-card.css';
 import '../styles/category-section.css';
 import Difficulty from './Difficulty';
+import TimeIcon from './TimeIcon';
+import IngredientsIcon from './IngredientsIcon';
 
 const CategorySection = ({ category }) => {
     const [filteredData, setFilteredData] = useState([]);
@@ -39,8 +41,8 @@ const CategorySection = ({ category }) => {
 
 
                                 <div className='drink-icon-info-div'>
-                                    <span><strong>Icon1</strong> {drink.timeInMins} min</span>
-                                    <span><strong>Icon2</strong> {drink.ingredients.length}</span>
+                                    <span><TimeIcon /> {drink.timeInMins} min</span>
+                                    <span><IngredientsIcon /> {drink.ingredients.length}</span>
                                     <Difficulty
                                     nrIngredients={drink.ingredients.length}
                                     nrInstructions={drink.instructions.length}>
