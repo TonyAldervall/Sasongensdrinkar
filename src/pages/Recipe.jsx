@@ -4,6 +4,7 @@ import Ingredients from '../components/Ingredients';
 import Navbar from '../components/Navbar';
 import Instructions from '../components/Instructions';
 import '../styles/Recipe.css';
+import RatingSection from '../components/Rating';
 
 
 function Recipe() {
@@ -13,6 +14,7 @@ function Recipe() {
     <>
       <Navbar />
       <h1>Hello {recipeId}!</h1>
+      <RatingSection />
       <div className='recipeContainer'>
         <Ingredients />
         <Instructions />

@@ -125,3 +125,28 @@ li input[type="checkbox"]:checked + span{
         
     }
 }
+
+.rating{
+    color: plum;
+}
+
+.MuiRating-decimal{
+    margin: 0;
+}
+
+.MuiRating-icon{
+    margin: 2px;
+    font-size: 20px;
+}
+
+.MuiRating-icon.MuiRating-iconFilled{
+    color: rgb(216, 165, 238);
+}
+
+span{
+    margin: 0;
+}
+
+.message{
+    color: black;
+}
