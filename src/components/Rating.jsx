@@ -6,8 +6,8 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import '../styles/Recipe.css';
 
-const RatingSection = () => {
-    const [ratings, setRatings] = useState(null);
+const RatingSection = ({rating, readOnly}) => {
+    const [ratings, setRatings] = useState(rating || null);
     const { recipeId } = useParams();
     const [rated, setRated] = useState(false);
     const [message, setMessage] = useState('');
@@ -36,7 +36,7 @@ const RatingSection = () => {
             if(!rated){
             setRatings(newRating); 
         
-            try {
+        
                 const response = await fetch(`https://recept5-kivel.reky.se/recipes/${recipeId}/ratings`, {
                     method: 'POST',
                     headers: {
@@ -51,13 +51,9 @@ const RatingSection = () => {
                     setRated(true);
                     sessionStorage.setItem(`rated_${recipeId}`, 'true');
                     setMessage(`Tack för ditt bidrag!`);
-                    console.log("Rating successfully saved", result); 
                 } else {
-                    console.error("Failed to save rating:", response.status);
+                    console.error(response.status);
                 }
-            } catch (error) {
-                console.error("Error saving rating:", error);
-            } 
             } else{
                 return;
             }
@@ -69,9 +65,9 @@ const RatingSection = () => {
             <Rating 
             name="simple-controlled"
             value={ratings}
-            readOnly={rated}
+            readOnly={rated || readOnly}
             onChange={(event, newRating) => {
-                if(!rated){
+                if(!rated && !readOnly){
                 saveRating(newRating);
                 <Typography component="legend">Tack för ditt bidrag!</Typography>
                 }

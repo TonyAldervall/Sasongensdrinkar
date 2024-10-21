@@ -3,6 +3,7 @@ import { fetchData } from '../utils/fetch';
 import { Link } from 'react-router-dom';
 import Difficulty from './Difficulty';
 import '../styles/drink-card.css';
+import RatingSection from './Rating';
 
 
 
@@ -59,7 +60,7 @@ const DrinkResultSection = ({ category, searchTerm}) => {
                                 </div>
 
                                 <div className='drink-rating-div'>
-                                    Placeholder Rating {/* Rating component that shows the average rating */}
+                                    <RatingSection rating={drink.avgRating} readOnly={true} />
                                 </div>
                             </div>
 

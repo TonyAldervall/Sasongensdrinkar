@@ -6,6 +6,7 @@ import '../styles/category-section.css';
 import Difficulty from './Difficulty';
 import TimeIcon from './TimeIcon';
 import IngredientsIcon from './IngredientsIcon';
+import RatingSection from './Rating';
 
 const CategorySection = ({ category }) => {
     const [filteredData, setFilteredData] = useState([]);
@@ -50,7 +51,7 @@ const CategorySection = ({ category }) => {
                                 </div>
 
                                 <div className='drink-rating-div'>
-                                    Placeholder Rating {/* Rating component that shows the average rating */}
+                                    <RatingSection rating={drink.avgRating} readOnly={true} />
                                 </div>
                             </div>
 
