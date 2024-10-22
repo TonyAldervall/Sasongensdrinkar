@@ -13,7 +13,7 @@ const RatingSection = ({rating, readOnly}) => {
     const [message, setMessage] = useState('');
 
     useEffect(()=>{
-        const ratingStatus = sessionStorage.getItem(`rated_${recipeId}`);
+        const ratingStatus = localStorage.getItem(`rated_${recipeId}`);
         if (ratingStatus){
             setRated(true);
         }
@@ -49,7 +49,7 @@ const RatingSection = ({rating, readOnly}) => {
         
                 const result = response.headers.get('content-length') > 0 ? await response.json() : null;
                     setRated(true);
-                    sessionStorage.setItem(`rated_${recipeId}`, 'true');
+                    localStorage.setItem(`rated_${recipeId}`, 'true');
                     setMessage(`Tack för ditt bidrag!`);
                 } else {
                     console.error(response.status);
@@ -59,20 +59,28 @@ const RatingSection = ({rating, readOnly}) => {
             }
         };
 
+    const ratingnumber = typeof ratings === 'number' ? ratings.toFixed(1) : '';
+
+
     return(
         <div className='rating'>
         <Box sx={{'& > legend': {mt:2}}}>
             <Rating 
             name="simple-controlled"
-            value={ratings}
+            value={Math.floor(ratings)}
             readOnly={rated || readOnly}
             onChange={(event, newRating) => {
-                if(!rated && !readOnly){
-                saveRating(newRating);
-                <Typography component="legend">Tack för ditt bidrag!</Typography>
+                if(!rated && !readOnly && newRating !== null){
+                    saveRating(newRating);
+                } else if(newRating == null){
+                    saveRating(Math.floor(ratings))
                 }
+
             }}
             />
+            <Typography>
+                {ratingnumber}
+            </Typography>
         </Box>
         {rated && message && (
             <div className='message'>{message}</div>

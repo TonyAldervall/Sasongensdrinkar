@@ -126,8 +126,10 @@ li input[type="checkbox"]:checked + span{
     }
 }
 
-.rating{
-    color: plum;
+.MuiBox-root{
+    display: flex;
+    margin: 5px;
+
 }
 
 .MuiRating-decimal{
@@ -143,10 +145,18 @@ li input[type="checkbox"]:checked + span{
     color: rgb(216, 165, 238);
 }
 
+.MuiTypography-root.MuiTypography-body1{
+    margin-left: 10px;
+    margin-top: 1px;
+    color: black;
+}
+
 span{
     margin: 0;
 }
 
 .message{
     color: black;
+    display: flex;
+    margin: 5px;
 }
