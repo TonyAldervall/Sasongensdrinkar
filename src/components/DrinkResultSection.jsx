@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import Difficulty from './Difficulty';
 import '../styles/drink-card.css';
 import RatingSection from './Rating';
-
+import TimeIcon from './TimeIcon';
+import IngredientsIcon from './IngredientsIcon';
 
 
 const DrinkResultSection = ({ category, searchTerm}) => {
@@ -51,8 +52,8 @@ const DrinkResultSection = ({ category, searchTerm}) => {
 
 
                                 <div className='drink-icon-info-div'>
-                                    <span><strong>Icon1</strong> {drink.timeInMins} min</span>
-                                    <span><strong>Icon2</strong> {drink.ingredients.length}</span>
+                                    <span><TimeIcon /> {drink.timeInMins} min</span>
+                                    <span><IngredientsIcon /> {drink.ingredients.length}</span>
                                     <Difficulty
                                     nrIngredients={drink.ingredients.length}
                                     nrInstructions={drink.instructions.length}>
