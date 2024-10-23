@@ -63,14 +63,14 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 970px) {
     .drink-grid {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 970px) and (min-width: 655px){
     .drink-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
