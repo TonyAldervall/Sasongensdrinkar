@@ -10,7 +10,7 @@
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem; 
-
+}
 .home-button {
     display: flex;
     padding: 5px;
@@ -97,7 +97,5 @@
     .search-container {
         width: 80px;
     }
-
-}
 
 }
