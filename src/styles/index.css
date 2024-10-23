@@ -23,4 +23,5 @@ body {
   height: 100vh;
   text-align: center; 
   background-color: rgba(227, 192, 255, 0.37);
+  overflow: hidden;
 }
