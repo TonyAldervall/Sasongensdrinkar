@@ -12,7 +12,9 @@ function Search() {
   return (
     <>
       <Navbar/>
-      <DrinkResultSection searchTerm={searchTerm} category={null}/>
+      <div className='content-wrapper'>
+        <DrinkResultSection searchTerm={searchTerm} category={null}/>
+      </div>
     </>
   );
 }

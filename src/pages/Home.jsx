@@ -6,7 +6,9 @@ function Home() {
   return (
     <>
       <Navbar/>
-      <RecipeSection />
+      <div className='content-wrapper'>
+        <RecipeSection />
+      </div>
     </>
   );
 }

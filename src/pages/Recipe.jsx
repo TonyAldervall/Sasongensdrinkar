@@ -27,20 +27,21 @@ function Recipe() {
     return (
         <>
             <Navbar />
-            {recipeData && (
-                <>
-                    <RecipeBox recipeData={recipeData} />
 
-                    <div className='recipeContainer'>
-                        <Ingredients ingredients={recipeData.ingredients} />
-                        <Instructions instructions={recipeData.instructions} />
-                    </div>
-
-                    <div className="comments-wrapper"> 
-                        <Comments recipeId={recipeId} />
-                    </div>
-                </>
-            )}
+            <div className='content-wrapper'>
+                {recipeData && (
+                    <>
+                        <RecipeBox recipeData={recipeData} />
+                        <div className='recipeContainer'>
+                            <Ingredients ingredients={recipeData.ingredients} />
+                            <Instructions instructions={recipeData.instructions} />
+                        </div>
+                        <div className="comments-wrapper">
+                            <Comments recipeId={recipeId} />
+                        </div>
+                    </>
+                )}
+            </div>
         </>
     );
 }
