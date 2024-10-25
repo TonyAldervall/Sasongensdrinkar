@@ -45,8 +45,8 @@ function Navbar() {
     }, [recipeId, categoryId])
 
     return (
-        <div className='navbar-outer'>
-            <div className={`navbar ${category}`} >
+        <div className={`navbar-outer ${category}`}>
+            <div className='navbar' >
                 <NavLink to='/' className='home-button'>
                     <img className='logo' src={logo} alt="Logo" />
                 </NavLink>

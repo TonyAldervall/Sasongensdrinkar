@@ -5,32 +5,34 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-position: center;
 }
 .navbar {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    background-position: center;
     padding: 5px;
+    max-width: 1280px;
+    margin: auto;
 }
 
-.navbar.höst{
+.navbar-outer.höst{
     background-image: url(autumn-83761_1280.jpg);
 }
 
-.navbar.vår{
+.navbar-outer.vår{
     background-image: url(japanese-cherry-blossom-2168858_1280.jpg);
 }
 
-.navbar.sommar{
+.navbar-outer.sommar{
     background-image: url(meadow-daisies-474255_1280.jpg);
 }
 
-.navbar.vinter{
+.navbar-outer.vinter{
     background-image: url(winter-1898134_1280.jpg);
 }
 
-.navbar.default{
+.navbar-outer.default{
     background-color: rgb(227, 192, 255);
 }
 
