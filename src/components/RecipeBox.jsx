@@ -25,7 +25,7 @@ const RecipeBox = ({ recipeData }) => {
                     />
                 </div>
 
-                <RatingSection rating={recipeData.ratings?.length > 0 ? recipeData.ratings.reduce((a, b) => a + b) / recipeData.ratings.length : 0} readOnly={true} />
+                <RatingSection/>
             </div>
         </div>
     );

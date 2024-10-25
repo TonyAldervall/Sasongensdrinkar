@@ -30,7 +30,6 @@ function Recipe() {
             {recipeData && (
                 <>
                     <RecipeBox recipeData={recipeData} />
-                    <RatingSection rating={recipeData.ratings?.length > 0 ? recipeData.ratings.reduce((a, b) => a + b) / recipeData.ratings.length : 0} readOnly={true} />
 
                     <div className='recipeContainer'>
                         <Ingredients ingredients={recipeData.ingredients} />

@@ -7,6 +7,8 @@ const Comments = ({ recipeId }) => {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -19,11 +21,36 @@ const Comments = ({ recipeId }) => {
     fetchComments();
   }, [recipeId]);
 
-  const handleAddComment = async () => {
-    if (!name.trim() || !newComment.trim()) return; 
+  function getFormattedDate() {
+    const date = new Date();
+  
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const day = String(date.getDate()).padStart(2, '0');
+  
+    return `${year}-${month}-${day}$`;
+  }
 
+  const handleAddComment = async () => {
+    if (!name.trim() || !newComment.trim()) {
+      setErrorMessage('Den här fälten kan inte vara tom.')
+      return;
+    }
+       
+    const letterOnlyRegex = /^[A-Za-z]+$/;
+
+    if (!name) {
+      setErrorMessage('Den här fälten kan inte vara tom.');
+      return;
+    } else if (!letterOnlyRegex.test(name)) {
+      setErrorMessage('Ange endast bokstäver.');
+      return;
+    } 
+    
+    let date = getFormattedDate();
+    
     const newCommentData = {
-      name: name,
+      name: date + name,
       comment: newComment,
     };
 
@@ -53,6 +80,8 @@ const Comments = ({ recipeId }) => {
           placeholder="Ditt namn"
           className="input-field"
         />
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+
         <textarea
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
@@ -67,12 +96,16 @@ const Comments = ({ recipeId }) => {
       {loading ? (
         <p>Laddar kommentarer...</p>
       ) : comments.length > 0 ? (
-        comments.map((comment, index) => (
-          <div key={index} className="comment-card">
-            <p><strong>{comment.name}:</strong></p>
-            <p>{comment.comment}</p>
-          </div>
-        ))
+        comments.map((comment, index) => {
+          const [date, name] = comment.name.split("$");
+          return (
+            <div key={index} className="comment-card">
+              <p><strong>{name}:</strong> {date}</p>
+              <p>{comment.comment}</p>
+            </div>
+          );
+        })
+        
       ) : (
         <p>Inga kommentarer än.</p>
       )}
