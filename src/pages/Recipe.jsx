@@ -30,7 +30,6 @@ function Recipe() {
             {recipeData && (
                 <>
                     <RecipeBox recipeData={recipeData} />
-
                     <div className='recipeContainer'>
                         <Ingredients ingredients={recipeData.ingredients} />
                         <Instructions instructions={recipeData.instructions} />

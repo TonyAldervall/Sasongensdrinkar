@@ -80,7 +80,6 @@ const Comments = ({ recipeId }) => {
           placeholder="Ditt namn"
           className="input-field"
         />
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
         <textarea
           value={newComment}
@@ -88,6 +87,8 @@ const Comments = ({ recipeId }) => {
           placeholder="Lägg till kommentar..."
           className="textarea-field"
         ></textarea>
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} 
+
         <button onClick={handleAddComment} disabled={isSubmitting} className="submit-button">
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
@@ -100,8 +101,12 @@ const Comments = ({ recipeId }) => {
           const [date, name] = comment.name.split("$");
           return (
             <div key={index} className="comment-card">
-              <p><strong>{name}:</strong> {date}</p>
-              <p>{comment.comment}</p>
+              <div className= "comment-card-title">
+              <p><strong>{name}</strong></p>
+              <p id= "comment-date">{date}</p>
+              </div>
+
+              <div className= "comment-card-comment"> <p>{comment.comment}</p></div>
             </div>
           );
         })
