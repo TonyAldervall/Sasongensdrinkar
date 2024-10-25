@@ -11,7 +11,7 @@
 
 #root{
   
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: rgba(227, 192, 255, 0.37);
 }
 
