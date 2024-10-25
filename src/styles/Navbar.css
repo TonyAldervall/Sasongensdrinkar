@@ -1,23 +1,50 @@
+.navbar-outer{
+    width: 100%;
+    background-color: rgb(227, 192, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .navbar {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    background-color: rgb(227, 192, 255);
-    color: white;
     padding: 5px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem; 
+    max-width: 1280px;
+    margin: auto;
+}
+
+.navbar-outer.höst{
+    background-image: url(autumn-83761_1280.jpg);
+}
+
+.navbar-outer.vår{
+    background-image: url(japanese-cherry-blossom-2168858_1280.jpg);
+}
+
+.navbar-outer.sommar{
+    background-image: url(meadow-daisies-474255_1280.jpg);
+}
+
+.navbar-outer.vinter{
+    background-image: url(winter-1898134_1280.jpg);
+}
+
+.navbar-outer.default{
+    background-color: rgb(227, 192, 255);
+}
 
 .home-button {
     display: flex;
-    padding: 5px;
+    padding-left: 5px;
 }
 
 .logo {
-    height: 60px;
+    height: 55px;
     border-radius: 10px;
 }
 
@@ -32,13 +59,15 @@
 
 #dropdown-button {
     background-color: white;
-    border: 1px solid rgb(124, 123, 123);
+    border: 1px solid rgb(6, 6, 6);
     color: black;
     margin-left: auto; 
     margin-right: 10px;
     padding: 5px 10px;
     border-radius: 5px; 
-    height: 40px;
+    height: 50px;
+    font-size: 16px;
+    
 }
 
 #dropdown-button:hover {
@@ -51,6 +80,10 @@
     text-decoration: underline;
 }
 
+#dropdown-button::after{
+    margin-left: 10px;
+}
+
 .search-container {
     flex-grow: 1;
     display: flex;
@@ -60,11 +93,10 @@
 
 .search {
     width: 100%; 
-    max-width: 600px;
+    max-width: 500px;
     padding: 5px 10px; 
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 4px;
-    
 }
 
 #outlined-basic{
@@ -77,12 +109,21 @@
     box-shadow: 0 0 5px rgba(227, 192, 255, 0.5); 
 }
 
+#outlined-basic-label{
+    color: rgb(0, 0, 0);
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: rgb(0, 0, 0) !important;
+}
+
+.MuiOutlinedInput-root{
+    background-color: white;
+}
+
+
+
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
     .search-container {
         width: auto;
     } 
@@ -97,7 +138,5 @@
     .search-container {
         width: 80px;
     }
-
-}
 
 }

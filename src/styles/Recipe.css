@@ -1,11 +1,15 @@
 .ingredients{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     box-sizing: border-box;
     width: fit-content;
-    border: 2px solid rgb(177, 177, 177);
-    border-radius: 10px;
-    margin: 10px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 5px 5px 8px rgb(207, 207, 207);
+    border-radius: 5px;
+    margin: 20px;
+    min-width: fit-content;
+    max-height: fit-content;
 }
 
 .header{
@@ -15,19 +19,21 @@
 
 .ingredients ul{
     list-style-type:none;
-    margin: 10px;
-    padding: 0;
-    color: rgb(116, 116, 116);
-    font-size: 14px;
+    padding: 5px;
+    padding-bottom: 10px;
+    font-size: 16px;
     margin-top: 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-.ingredients h3{
+.ingredients li{
+    margin: 5px;
+}
+
+.title{
     display: flex;
-    color: rgb(113, 113, 113);
-    font-size: 16px;
-    font-weight: 650;
+    font-size: 18px;
+    font-weight: 600;
     margin: 10px;
 }
 
@@ -43,15 +49,114 @@
     padding-top: 0;
     padding-bottom: 0;
     border: none;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
-    background-color: white;
-    color: rgb(96, 96, 96);
+    background-color: rgb(249, 248, 248);
 
+}
+
+.glasses button:hover{
+    transform: scale(1.3);
 }
 
 .glasses p{
     margin: 5px;
-    color: rgb(104, 104, 104);
     font-weight: 600;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px;
+}
+
+.instructions ul{
+    list-style-type: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.instructions li{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 5px 5px 8px rgb(207, 207, 207);
+    border-radius: 5px;
+    min-width: fit-content;
+
+}
+
+span{
+    margin: 8px;
+}
+
+.todo h3{
+    display: flex;
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+
+.box{
+    margin: 5px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    accent-color: rgb(101, 211, 117);
+    cursor: pointer;
+}
+
+li input[type="checkbox"]:checked + span{
+    color: rgb(147, 147, 147);
+    text-decoration: line-through;
+}
+
+.box:hover{
+    transform: scale(1.2);
+}
+
+@media (min-width: 650px){
+    .recipeContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+}
+
+.MuiBox-root{
+    display: flex;
+    margin: 5px;
+
+}
+
+.MuiRating-decimal{
+    margin: 0;
+}
+
+.MuiRating-icon{
+    margin: 2px;
+    font-size: 20px;
+}
+
+.MuiRating-icon.MuiRating-iconFilled{
+    color: rgb(216, 165, 238);
+}
+
+.MuiTypography-root.MuiTypography-body1{
+    margin-left: 10px;
+    margin-top: 1px;
+    color: black;
+}
+
+span{
+    margin: 0;
+}
+
+.message{
+    color: black;
+    display: flex;
+    margin: 5px;
 }

@@ -33,7 +33,7 @@ const Ingredients = () => {
     return(
         <div className='ingredients'>
             <div className='header'>
-                <h3>Ingredienser</h3>
+                <h3 className='title'>Ingredienser</h3>
                 <Glasses count={count} setCount={setCount}/>
             </div>
             <ul>
