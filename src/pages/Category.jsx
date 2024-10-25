@@ -10,7 +10,9 @@ function Category() {
   return (
     <>
       <Navbar/>
-      <DrinkResultSection category={categoryId}/>
+      <div className='content-wrapper'>
+        <DrinkResultSection category={categoryId}/>
+      </div>
     </>
   );
 }

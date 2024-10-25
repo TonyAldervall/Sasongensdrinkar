@@ -45,12 +45,14 @@ function Navbar() {
     }, [recipeId, categoryId])
 
     return (
-        <div className={`navbar ${category}`} >
-            <NavLink to='/' className='home-button'>
-                <img className='logo' src={logo} alt="Logo" />
-            </NavLink>
-            <SearchBar />
-            <DropDown />
+        <div className='navbar-outer'>
+            <div className={`navbar ${category}`} >
+                <NavLink to='/' className='home-button'>
+                    <img className='logo' src={logo} alt="Logo" />
+                </NavLink>
+                <SearchBar />
+                <DropDown />
+            </div>
         </div>
     );
 }
