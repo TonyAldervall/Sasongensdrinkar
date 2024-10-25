@@ -24,3 +24,19 @@ body {
   text-align: center; 
   background-color: rgba(227, 192, 255, 0.37);
 }
+
+body.vinter {
+  background-color: #c6d5fb; 
+}
+
+body.vår {
+  background-color: #efd4f3;
+}
+
+body.sommar {
+  background-color: #a7d3a4; 
+}
+
+body.höst {
+  background-color: #f4a46f;
+}
