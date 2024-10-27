@@ -3,6 +3,7 @@ import Difficulty from './Difficulty';
 import TimeIcon from './TimeIcon';
 import RatingSection from './Rating';
 import '../styles/RecipeBox.css';
+import IngredientsIcon from './IngredientsIcon';
 
 const RecipeBox = ({ recipeData }) => {
     if (!recipeData) return null;
@@ -14,18 +15,22 @@ const RecipeBox = ({ recipeData }) => {
             </div>
 
             <div className='recipe-details-container'>
-                <h1>{recipeData.title}</h1>
-                <p>{recipeData.description}</p>
+                <h1 className='recipe-title'>{recipeData.title}</h1>
 
                 <div className='recipe-icon-info-div'>
                     <span><TimeIcon /> {recipeData.timeInMins} min</span>
+                    <span><IngredientsIcon /> {recipeData.ingredients.length}</span>
                     <Difficulty
                         nrIngredients={recipeData.ingredients.length}
                         nrInstructions={recipeData.instructions.length}
                     />
                 </div>
 
-                <RatingSection/>
+                <p className='recipe-description'>{recipeData.description}</p>
+
+                <div className='recipe-rating-div'>
+                    <RatingSection rating={recipeData.ratings} />
+                </div>
             </div>
         </div>
     );
