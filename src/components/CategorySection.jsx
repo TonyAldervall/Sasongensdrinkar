@@ -30,7 +30,7 @@ const CategorySection = ({ category }) => {
             </div>
 
             <div className="drink-grid">
-                {filteredData.slice(0, 3).map((drink, index) => (
+                {filteredData.sort((a, b) => b.avgRating - a.avgRating).slice(0, 3).map((drink, index) => (
                     <Link to={`/recipe/${drink._id}`} className='drink-card' key={index}>
                             <div className='drink-image-container'>
                                 <img src={drink.imageUrl} alt={`Picture for ${drink.title}`} />
