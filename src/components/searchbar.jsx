@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
+import SearchIcon from "./SearchIcon";
+import CrossIcon from "./CrossIcon";
+import '../styles/searchbar.css';
 
 function SearchBar() {
+  const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
@@ -16,20 +19,36 @@ function SearchBar() {
     }
   }
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      setSearchTerm("");
+    }
+  };
+
   return (
-    <div className="search-container">
-      <div className="search">
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Sök recept"
+    <form method="get" className="search-form">
+      {isOpen && (
+        <input
+          type="search"
+          name="search"
           value={searchTerm}
           onChange={handleSearchChange}
           onKeyDown={handleKeyPress}
+          placeholder="Sök recept..."
+          className="search-input"
         />
-      </div>
-    </div>
+      )}
+      
+      <button
+        type="button"
+        aria-label={isOpen ? "Stäng sök" : "Sök"}
+        className={isOpen ? "search-button search-button-open" : "search-button"}
+        onClick={handleToggle}
+      >
+        {isOpen ? <CrossIcon /> : <SearchIcon />}
+      </button>
+    </form>
   );
 }
 
