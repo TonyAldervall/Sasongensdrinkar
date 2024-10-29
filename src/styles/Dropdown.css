@@ -6,6 +6,8 @@
     margin: 10px;
 }
 
+
+
 #season-button {
     border: none;
     color: black;
@@ -105,4 +107,6 @@
 body > div.sidebar.offcanvas.offcanvas-end.show{
     width: 230px;
     background-color: rgb(243, 243, 243);
+    
+    
 }

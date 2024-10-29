@@ -3,7 +3,7 @@ import SearchBar from './searchbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { NavLink, useParams } from 'react-router-dom';
-import logo from '../styles/Logotyp_Säsongensdrinkar_förslag.png';
+import logo from '../styles/loggan.png';
 import DropDown from './Dropdown';
 import { fetchData } from '../utils/fetch';
 

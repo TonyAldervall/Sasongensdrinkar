@@ -10,7 +10,7 @@
 }
 
 #root{
-  background-color: rgba(255, 255, 255, 0.249);
+  background-color: rgba(255, 255, 255, 0.192);
 }
 
 body {
@@ -30,23 +30,23 @@ body {
 }
 
 body.vinter {
-  background-image: url(winter-1898134_1280.jpg);
+  background-image: url(todd-diemer-67t2GJcD5PI-unsplash.jpg);
   background-size: cover;
 }
 
 body.vår {
-  background-image: url(japanese-cherry-blossom-2168858_1280.jpg);
+  background-image: url(cosmos-flowers-1138041_1920.jpg);
   background-size: cover;
   position: relative;
   margin: 0;
 }
 
 body.sommar {
-  background-image: url(meadow-daisies-474255_1280.jpg); 
+  background-image: url(henry-be-IicyiaPYGGI-unsplash.jpg); 
   background-size: cover;
 }
 
 body.höst {
-  background-image: url(road-1072821_1920.jpg);
+  background-image: url(kristian-seedorff-BvUicqkaZZ0-unsplash.jpg);
   background-size: cover;
 }
