@@ -1,6 +1,6 @@
 .navbar-outer{
     width: 100%;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(235, 212, 215);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -26,6 +26,7 @@
 
 .logo {
     height: 55px;
+    width: 250px;
     border-radius: 10px;
 }
 
