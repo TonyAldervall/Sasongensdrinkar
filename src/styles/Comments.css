@@ -1,12 +1,13 @@
 .comments-wrapper {
   background-color: #fafafa;
   border: 1px solid #e0e0e0;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 25px;
   margin: 30px auto;
   max-width: 700px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: 'Arial', sans-serif;
+  
 }
 
 h3 {
