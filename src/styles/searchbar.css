@@ -13,12 +13,30 @@
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
+    transition: background-color 0.2s ease;
+}
+.search-button svg{
+    stroke: #000000;
+    transition: stroke 0.2s ease;
+}
+.search-button:hover{
+    background-color: #e9c0db;
+
+}
+.search-button:hover svg{
+    stroke: #ffffff;
 }
 
 .search-button-open{
     background-color: #e2e2e2;
     width: 30px;
     height: 30px;
+}
+.search-button-open:hover{
+    background-color: #e2e2e2;
+}
+.search-button-open:hover svg{
+    stroke: #000000;
 }
 
 .search-form {
