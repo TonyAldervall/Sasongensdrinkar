@@ -11,8 +11,7 @@ import { Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-function DropDown(){
-
+function DropDown() {
     const [show, setShow] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -20,45 +19,51 @@ function DropDown(){
     const handleClose = () => {
         setShow(false);
         setDropdownOpen(false);
-    }    
+    }
 
     const handleItemClick = () => {
+
         handleClose();
     }
-    
 
     const toggleDropdown = () => {
-        if(dropdownOpen){
-            setDropdownOpen(false);
-        } else {
-            setDropdownOpen(true);
-        }
+        setDropdownOpen(prev => !prev);
     }
-    
-    return(
+
+    return (
         <div className='dropdown-container'>
             <Button variant="primary" onClick={handleShow}>
-                {<FontAwesomeIcon icon={faBars} id='icon'/>}
+                <FontAwesomeIcon icon={faBars} id='icon' />
             </Button>
             <Offcanvas className='sidebar' show={show} onHide={handleClose} placement='end' backdrop={false}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title className='sidebar-title'>Våra drinkar</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <Link className='topList' as={HashLink} to="/toplist" onClick={handleItemClick}> Topplista </Link>
-                    <DropdownButton id='season-button' title='Säsonger' show={dropdownOpen} onClick={toggleDropdown}>
-                        <div className='dropdown-menu.show'style={{ display: dropdownOpen ? 'block' : 'none'}}>
-                            <Dropdown.Item as={HashLink} to="/category/Höst" onClick={handleItemClick}>Höst</Dropdown.Item>
-                            <Dropdown.Item as={HashLink} to="/category/Vinter" onClick={handleItemClick}>Vinter</Dropdown.Item>
-                            <Dropdown.Item as={HashLink} to="/category/Vår" onClick={handleItemClick}>Vår</Dropdown.Item>
-                            <Dropdown.Item as={HashLink} to="/category/Sommar" onClick={handleItemClick}>Sommar</Dropdown.Item>
-                        </div>
+                    <DropdownButton
+                        id='season-button'
+                        title='Säsonger'
+                        variant="light"
+                        drop="down"
+                        show={dropdownOpen}
+                        onClick={toggleDropdown}
+                    >
+                        <Dropdown.Item as={HashLink} to="/category/höst" onClick={[handleItemClick, toggleDropdown]}>Höst</Dropdown.Item>
+                        <Dropdown.Item as={HashLink} to="/category/vinter" onClick={[handleItemClick, toggleDropdown]}>Vinter</Dropdown.Item>
+                        <Dropdown.Item as={HashLink} to="/category/vår" onClick={[handleItemClick, toggleDropdown]}>Vår</Dropdown.Item>
+                        <Dropdown.Item as={HashLink} to="/category/sommar" onClick={[handleItemClick, toggleDropdown]}>Sommar</Dropdown.Item>
                     </DropdownButton>
+
+                    <div className='dropdown-links-container'>
+                        <Link className='dropdown-link' as={HashLink} to="/toplist" onClick={handleItemClick}>Topplista</Link>
+                        <Link className='dropdown-link' as={HashLink} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
+                        <Link className='dropdown-link' as={HashLink} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
+                        <Link className='dropdown-link' as={HashLink} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
-        
-    )
-
+    );
 }
+
 export default DropDown;

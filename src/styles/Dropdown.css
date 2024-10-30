@@ -42,7 +42,6 @@
 .dropdown-container {
     display: flex;
     position: relative;
-
 }
 
 .dropdown-container Button{
@@ -61,6 +60,9 @@
 .dropdown-container Button:hover{
     background-color: #e9c0db;
 }
+.dropdown-container Button:active{
+    background-color: inherit;
+}
 
 #icon{
     font-size: 18px;
@@ -70,24 +72,27 @@
 }
   
 .dropdown-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
     border: none;
-    position: absolute;
-    padding-top: 2rem;
+    position: relative;
     transform: none;
     background-color: transparent;
 }
 
 .dropdown-menu.show{
-    padding: 0;
+    display: flex;
+}
+
+.show.dropdown{
+    margin-bottom: 145px;
 }
 
 .dropdown-item{
-    display: flex;
+    display: block;
     justify-content: start;
     padding: 5px 0 0 0;
     margin: 0;
@@ -96,7 +101,7 @@
     font-size: 17px;
 }
 
-.topList{
+.dropdown-link{
     display: flex;
     margin: 10px;
     font-size: 18px;
@@ -105,7 +110,7 @@
     color: inherit;
 }
 
-.topList:hover{
+.dropdown-link:hover{
     font-weight: 700;
 }
 

@@ -11,7 +11,7 @@ const DrinkResultSection = ({ category, searchTerm}) => {
             const result = await fetchData('https://recept5-kivel.reky.se/recipes');
 
             if(category !== null){
-                const filtered = result.filter(item => item.categories.includes(category));
+                const filtered = result.filter(item => item.categories.some(cat => cat.toLowerCase() === category.toLowerCase()));
                 setFilteredData(filtered);
             }
             else if(searchTerm !== null){

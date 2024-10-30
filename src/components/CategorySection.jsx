@@ -12,7 +12,7 @@ const CategorySection = ({ category }) => {
             const result = await fetchData('https://recept5-kivel.reky.se/recipes');
 
             const filtered = result
-            .filter(item => item.categories.includes(category))
+            .filter(item => item.categories.some(cat => cat.toLowerCase() === category.toLowerCase()))
             .sort((a, b) => b.avgRating - a.avgRating)
             .slice(0, 3);
             setFilteredData(filtered);
