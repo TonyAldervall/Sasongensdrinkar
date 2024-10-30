@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';
 import { Offcanvas } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function DropDown(){
@@ -44,7 +45,7 @@ function DropDown(){
                     <Offcanvas.Title className='sidebar-title'>Våra drinkar</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <p className='topList'> Topplista </p>
+                    <Link className='topList' as={HashLink} to="/toplist" onClick={handleItemClick}> Topplista </Link>
                     <DropdownButton id='season-button' title='Säsonger' show={dropdownOpen} onClick={toggleDropdown}>
                         <div className='dropdown-menu.show'style={{ display: dropdownOpen ? 'block' : 'none'}}>
                             <Dropdown.Item as={HashLink} to="/category/Höst" onClick={handleItemClick}>Höst</Dropdown.Item>

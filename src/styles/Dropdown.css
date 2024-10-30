@@ -101,6 +101,8 @@
     margin: 10px;
     font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .topList:hover{
