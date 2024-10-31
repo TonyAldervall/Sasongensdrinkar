@@ -3,12 +3,11 @@
     z-index: 500;
     transition: transform 0.2s ease-in-out;
     transform: translateX(100%);
-
 }
 
 .sidebar.show{
     transform: translateX(0);
-    height: fit-content;
+    height: 100%;
 }
 
 .offcanvas-body{
@@ -18,11 +17,10 @@
     flex-direction: column;
     align-self: center;
     max-width: 1280px;
-    width: 100%;
-    align-items: flex-end;
+    width: 40vw;
+    align-items: flex-start;
     height: fit-contents;
     overflow-y: visible;
-
 }
 
 #season-button {
@@ -31,10 +29,10 @@
     margin: 10px;
     padding: 0;
     padding-right: 20px;
-    font-size: 25px; 
+    font-size: 2rem; 
     background-color: transparent;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     width: 100%;
 }
 
@@ -77,14 +75,14 @@
     margin: 0 auto;
     padding: 0;
     border: 0;
-    min-width: 100vw;
     background-color: rgb(235, 212, 215);
-    z-index: 600; 
+    z-index: 600;
+    display: flex;
 }
 
 .dropdown-item{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-self: end;
     align-content: center;
     padding-right: 30px;
@@ -107,45 +105,18 @@
 
 .dropdown-link{
     display: flex;
-    justify-content: end;
+    justify-content: start;
     margin: 10px;
     font-size: 25px;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+    font-size: 2rem;
 }
 
 .dropdown-link:hover{
     font-weight: 700;
 }
-
-/* .winter{
-    background: linear-gradient(rgba(173, 216, 230, 0.795), rgba(0, 0, 255, 0.795));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.spring{
-    background: linear-gradient(rgba(0, 128, 0, 0.795), rgba(0, 255, 0, 0.795));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.summer{
-    background: linear-gradient(rgba(255, 0, 0, 0.795), rgba(255, 255, 0, 0.795));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.autumn{
-    background: linear-gradient(rgba(255, 145, 0, 0.795), rgba(88, 52, 28, 0.795));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
 
 .menu-button{
     background-color: #ffffff;

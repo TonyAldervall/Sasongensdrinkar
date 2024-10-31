@@ -6,6 +6,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import logo from '../styles/loggan.png';
 import DropDown from './Dropdown';
 import { fetchData } from '../utils/fetch';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -45,6 +46,7 @@ function Navbar() {
     }, [recipeId, categoryId])
 
     return (
+        <>
         <div className={`navbar-outer ${category}`}>
             <div className='navbar' >
                 <NavLink to='/' className='home-button'>
@@ -54,6 +56,24 @@ function Navbar() {
                 <DropDown />
             </div>
         </div>
+        <div className='navbar-bottom-outer'>
+            <div className='navbar-bottom'>
+                <NavLink className='navbar-bottom-button winter' to='/category/vinter'>
+                    <span>Vinter</span>
+                </NavLink>
+                <NavLink className='navbar-bottom-button spring' to='/category/vår'>
+                    <span>Vår</span>
+                </NavLink>
+                <NavLink className='navbar-bottom-button summer' to='/category/sommar'>
+                    <span>Sommar</span>
+                </NavLink>
+                <NavLink className='navbar-bottom-button autumn' to='/category/höst'>
+                    <span>Höst</span>
+                </NavLink>
+            </div>
+        </div>
+        </>
+        
     );
 }
 

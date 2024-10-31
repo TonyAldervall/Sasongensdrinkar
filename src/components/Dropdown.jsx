@@ -49,7 +49,7 @@ function DropDown() {
             className='sidebar' 
             show={show} 
             onHide={handleClose} 
-            placement='top' 
+            placement='end'
             backdrop={false}
             scroll={true}>
                 <Offcanvas.Body>
@@ -70,7 +70,7 @@ function DropDown() {
                     onClick={toggleDropdown} 
                     title={
                         <span className='season-button'>
-                            <FontAwesomeIcon icon={dropdownOpen ? faChevronUp : faChevronDown} id='arrow'/> Säsonger
+                            Säsonger <FontAwesomeIcon icon={dropdownOpen ? faChevronUp : faChevronDown} id='arrow'/>
                         </span>
                     }>
                         <div className='dropdown-menu'style={{ display: dropdownOpen ? 'block' : 'none'}}>
