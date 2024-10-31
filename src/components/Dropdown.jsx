@@ -3,19 +3,29 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Dropdown.css';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';
 import { Offcanvas } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
 
 
 function DropDown() {
     const [show, setShow] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        if(show){
+            setShow(false);
+            setDropdownOpen(false);
+            document.body.style.overflow = 'auto'; 
+        }else{
+            setShow(true);
+            document.body.style.overflow = 'visible'; 
+        }
+    }
+        
     const handleClose = () => {
         setShow(false);
         setDropdownOpen(false);
@@ -33,33 +43,40 @@ function DropDown() {
     return (
         <div className='dropdown-container'>
             <Button variant="primary" onClick={handleShow}>
-                <FontAwesomeIcon icon={faBars} id='icon' />
+                {<FontAwesomeIcon icon={show ? faTimes : faBars} id='icon'/>}
             </Button>
-            <Offcanvas className='sidebar' show={show} onHide={handleClose} placement='end' backdrop={false}>
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title className='sidebar-title'>Våra drinkar</Offcanvas.Title>
-                </Offcanvas.Header>
+            <Offcanvas 
+            className='sidebar' 
+            show={show} 
+            onHide={handleClose} 
+            placement='top' 
+            backdrop={false}
+            scroll={true}>
                 <Offcanvas.Body>
-                    <DropdownButton
-                        id='season-button'
-                        title='Säsonger'
-                        variant="light"
-                        drop="down"
-                        show={dropdownOpen}
-                        onClick={toggleDropdown}
-                    >
-                        <Dropdown.Item as={HashLink} to="/category/höst" onClick={[handleItemClick, toggleDropdown]}>Höst</Dropdown.Item>
-                        <Dropdown.Item as={HashLink} to="/category/vinter" onClick={[handleItemClick, toggleDropdown]}>Vinter</Dropdown.Item>
-                        <Dropdown.Item as={HashLink} to="/category/vår" onClick={[handleItemClick, toggleDropdown]}>Vår</Dropdown.Item>
-                        <Dropdown.Item as={HashLink} to="/category/sommar" onClick={[handleItemClick, toggleDropdown]}>Sommar</Dropdown.Item>
-                    </DropdownButton>
-
                     <div className='dropdown-links-container'>
-                        <Link className='dropdown-link' as={HashLink} to="/toplist" onClick={handleItemClick}>Topplista</Link>
-                        <Link className='dropdown-link' as={HashLink} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
-                        <Link className='dropdown-link' as={HashLink} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
-                        <Link className='dropdown-link' as={HashLink} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
+                        <Link className='dropdown-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
+                        <Link className='dropdown-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
+                        <Link className='dropdown-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
+                        <Link className='dropdown-link' as={Link} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
                     </div>
+                    <DropdownButton 
+                    id='season-button' 
+                    show={dropdownOpen} 
+                    onClick={toggleDropdown} 
+                    title={
+                        <span className='season-button'>
+                            <FontAwesomeIcon icon={dropdownOpen ? faChevronUp : faChevronDown} id='arrow'/> Säsonger
+                        </span>
+                    }>
+                        <div className='dropdown-menu'style={{ display: dropdownOpen ? 'block' : 'none'}}>
+                            <div className='items'>
+                            <Dropdown.Item as={Link} to="/category/Höst" onClick={handleItemClick}>Höst</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/category/Vinter" onClick={handleItemClick}>Vinter</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/category/Vår" onClick={handleItemClick}>Vår</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/category/Sommar" onClick={handleItemClick}>Sommar</Dropdown.Item>
+                            </div>
+                        </div>
+                    </DropdownButton>
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
