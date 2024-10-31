@@ -27,7 +27,7 @@ function SearchBar() {
   };
 
   return (
-    <form method="get" className="search-form">
+    <div className="search-container">
       {isOpen && (
         <input
           type="search"
@@ -48,7 +48,7 @@ function SearchBar() {
       >
         {isOpen ? <CrossIcon /> : <SearchIcon />}
       </button>
-    </form>
+    </div>
   );
 }
 

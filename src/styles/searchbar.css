@@ -39,7 +39,7 @@
     stroke: #000000;
 }
 
-.search-form {
+.search-container {
     flex-grow: 1;
     display: flex;
     justify-content: right; 
