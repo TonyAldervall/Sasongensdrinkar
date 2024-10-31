@@ -54,34 +54,11 @@ function DropDown() {
             scroll={true}>
                 <Offcanvas.Body>
                 <div className='dropdown-links-container'>
-                    {/* <Link className='dropdown-link winter' as={Link} to="/category/Vinter" onClick={handleItemClick}>Vinter</Link>
-                    <Link className='dropdown-link spring' as={Link} to="/category/Vår" onClick={handleItemClick}>Vår</Link>
-                    <Link className='dropdown-link summer' as={Link} to="/category/Sommar" onClick={handleItemClick}>Sommar</Link>
-                    <Link className='dropdown-link autumn' as={Link} to="/category/Höst" onClick={handleItemClick}>Höst</Link> */}
-
                     <Link className='dropdown-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
                     <Link className='dropdown-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
                     <Link className='dropdown-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
                     <Link className='dropdown-link' as={Link} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
                 </div>
-                    <DropdownButton 
-                    id='season-button' 
-                    show={dropdownOpen} 
-                    onClick={toggleDropdown} 
-                    title={
-                        <span className='season-button'>
-                            Säsonger <FontAwesomeIcon icon={dropdownOpen ? faChevronUp : faChevronDown} id='arrow'/>
-                        </span>
-                    }>
-                        <div className='dropdown-menu'style={{ display: dropdownOpen ? 'block' : 'none'}}>
-                            <div className='items'>
-                            <Dropdown.Item as={Link} to="/category/Höst" onClick={handleItemClick}>Höst</Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/category/Vinter" onClick={handleItemClick}>Vinter</Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/category/Vår" onClick={handleItemClick}>Vår</Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/category/Sommar" onClick={handleItemClick}>Sommar</Dropdown.Item>
-                            </div>
-                        </div>
-                    </DropdownButton>
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
