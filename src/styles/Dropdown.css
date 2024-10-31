@@ -103,9 +103,6 @@
     min-width: 100vw;
     background-color: rgb(235, 212, 215);
     z-index: 600; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .dropdown-item{

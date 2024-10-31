@@ -19,10 +19,9 @@ function DropDown() {
         if(show){
             setShow(false);
             setDropdownOpen(false);
-            document.body.style.overflow = 'auto'; 
         }else{
             setShow(true);
-            document.body.style.overflow = 'visible'; 
+            setDropdownOpen(false);
         }
     }
         
@@ -53,7 +52,7 @@ function DropDown() {
             backdrop={false}
             scroll={true}>
                 <Offcanvas.Body>
-                    <div className='dropdown-links-container'>
+                <div className='dropdown-links-container'>
                         <Link className='dropdown-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
                         <Link className='dropdown-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
                         <Link className='dropdown-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
