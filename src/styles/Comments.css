@@ -1,51 +1,51 @@
 .comments-wrapper {
-  background-color: #ffffff;
+  background-color: #fafafa;
   border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Arial', sans-serif;
+  
 }
 
 h3 {
   color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
+  font-size: 26px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .comment-card {
-  background-color: #f9f9f9;
-  border-left: 4px solid #007bff;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
 
 #comment-date {
-  color: #3333339a;
+  color: rgba(51, 51, 51, 0.6);
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .comment-card-title {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-
+  align-items: center;
 }
 
 .comment-card-comment {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .comment-input {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,13 +54,13 @@ h3 {
 .input-field,
 .textarea-field {
   width: 100%;
-  max-width: 400px;
-  padding: 12px;
-  margin: 5px 0;
+  max-width: 450px;
+  padding: 14px;
+  margin: 8px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s ease;
   text-align: center;
 }
 
@@ -68,21 +68,22 @@ h3 {
 .textarea-field:focus {
   border-color: #007bff;
   outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .textarea-field {
-  height: 80px;
+  height: 100px;
 }
 
 .submit-button {
-  background-color: #007bff;
+  background-color: #5f93ca;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border-radius: 8px;
+  padding: 12px 24px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.3s;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   align-self: center;
 }
 
@@ -91,13 +92,18 @@ h3 {
   cursor: not-allowed;
 }
 
-
-
 .submit-button:hover:not(:disabled) {
   background-color: #0056b3;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  
+}
+
+.error-message {
+  color: red; 
+  margin-bottom: 10px;
 }
 
 .comment-display {
-  margin-top: 20px;
+  margin-top: 25px;
 }

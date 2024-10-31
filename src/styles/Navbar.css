@@ -1,7 +1,6 @@
 .navbar-outer{
     width: 100%;
-    background-color: rgb(227, 192, 255);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(235, 212, 215);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -9,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between; 
@@ -18,24 +18,40 @@
     margin: auto;
 }
 
-.navbar-outer.höst{
-    background-image: url(autumn-83761_1280.jpg);
+.navbar-bottom-outer{
+    width: 100%;
+    background-color: rgb(255, 194, 201);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.navbar-outer.vår{
-    background-image: url(japanese-cherry-blossom-2168858_1280.jpg);
+.navbar-bottom{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 5px;
+    max-width: 1280px;
+    margin: auto;
+    height: 50px;
 }
 
-.navbar-outer.sommar{
-    background-image: url(meadow-daisies-474255_1280.jpg);
+.navbar-bottom-button{
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    width: 130px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
 }
 
-.navbar-outer.vinter{
-    background-image: url(winter-1898134_1280.jpg);
-}
-
-.navbar-outer.default{
-    background-color: rgb(227, 192, 255);
+.navbar-bottom-button:hover{
+    background-color: #fface3;
+    color: white;
 }
 
 .home-button {
@@ -45,6 +61,7 @@
 
 .logo {
     height: 55px;
+    width: 250px;
     border-radius: 10px;
 }
 
@@ -57,56 +74,8 @@
     opacity: 0.8; 
 }
 
-#dropdown-button {
-    background-color: white;
-    border: 1px solid rgb(6, 6, 6);
-    color: black;
-    margin-left: auto; 
-    margin-right: 10px;
-    padding: 5px 10px;
-    border-radius: 5px; 
-    height: 50px;
-    font-size: 16px;
-    
-}
-
-#dropdown-button:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.dropdown-item:hover {
-    background-color: rgba(224, 224, 224, 0.355); 
-    text-decoration: underline;
-}
-
-#dropdown-button::after{
-    margin-left: 10px;
-}
-
-.search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center; 
-    margin: 0 20px;
-}
-
-.search {
-    width: 100%; 
-    max-width: 500px;
-    padding: 5px 10px; 
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-}
-
 #outlined-basic{
     padding: 15px;
-}
-
-.search:focus {
-    border-color: rgb(227, 192, 255); 
-    outline: none;
-    box-shadow: 0 0 5px rgba(227, 192, 255, 0.5); 
 }
 
 #outlined-basic-label{
@@ -124,19 +93,8 @@
 
 
 @media (max-width: 768px) {
-    .search-container {
-        width: auto;
-    } 
-
     .navlink {
         margin-right: 0;
         margin-bottom: 10px; 
     }
-}
-
-@media (max-width: 500px) { 
-    .search-container {
-        width: 80px;
-    }
-
 }

@@ -10,9 +10,7 @@
 }
 
 #root{
-  
-  overflow-x: hidden;
-  background-color: rgba(227, 192, 255, 0.37);
+  background-color: rgba(255, 255, 255, 0.192);
 }
 
 body {
@@ -27,22 +25,28 @@ body {
   max-width: 1280px;
   min-height: 100vh;
   margin: auto;
-  background-color: white;
+  background-color: #fffaf5;
   
 }
 
 body.vinter {
-  background-color: #c6d5fb; 
+  background-image: url(todd-diemer-67t2GJcD5PI-unsplash.jpg);
+  background-size: cover;
 }
 
 body.vår {
-  background-color: #efd4f3;
+  background-image: url(cosmos-flowers-1138041_1920.jpg);
+  background-size: cover;
+  position: relative;
+  margin: 0;
 }
 
 body.sommar {
-  background-color: #a7d3a4; 
+  background-image: url(henry-be-IicyiaPYGGI-unsplash.jpg); 
+  background-size: cover;
 }
 
 body.höst {
-  background-color: #f4a46f;
+  background-image: url(kristian-seedorff-BvUicqkaZZ0-unsplash.jpg);
+  background-size: cover;
 }

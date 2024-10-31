@@ -2,75 +2,76 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 1rem;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
 }
 
-.drink-card{
+.drink-card {
     max-width: 279px;
     height: fit-content;
     margin: 1rem;
     text-decoration: none;
-    color: inherit;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333;
+    background-color: #fafafa;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.drink-image-container{
+.drink-image-container {
     width: 100%;
     max-height: 279px;
     overflow: hidden;
-    border-radius: 20px 20px 0 0;
+    border-radius: 16px 16px 0 0;
 }
-.drink-image-container img{
+
+.drink-image-container img {
     aspect-ratio: 1 / 1;
     width: 279px;
     height: 279px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
 }
 
-.drink-title{
+.drink-title {
     margin: 0;
     padding: 1rem;
     padding-bottom: 0;
-    text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+    text-align: start;
 }
 
-.drink-icon-info-div{
-    text-align: left;
-    padding: .5rem 1rem .5rem 1rem;
-}
-.drink-icon-info-div span{
-    margin: 0;
-    margin-right: 1rem;
-}
-
-.drink-rating-div{
-    padding: .5rem 1rem .8rem 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.07);
-    text-align: left;
+.drink-icon-info-div {
+    padding: 0.5rem 1rem;
+    color: #555;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
-.drink-card:hover .drink-image-container img {
-    transform: scale(1.1); 
+.drink-icon-info-div span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-.drink-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.drink-rating-div {
+    padding: 0.5rem 1rem 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #666;
+    font-size: 0.9rem;
 }
 
 @media (min-width: 970px) {
     .drink-grid {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 970px) and (min-width: 655px){
+@media (max-width: 970px) and (min-width: 655px) {
     .drink-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -5,6 +5,7 @@ import Home from './Home.jsx'
 import Category from './Category.jsx';
 import Recipe from './Recipe.jsx';
 import Search from './Search.jsx';
+import Toplist from './Toplist.jsx';
 import '../styles/index.css'
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/search/:searchTerm",
     element: <Search />,
+  },
+  {
+    path: "/toplist",
+    element: <Toplist />,
   }
 ]);
 
