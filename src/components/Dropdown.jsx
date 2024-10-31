@@ -6,8 +6,9 @@ import '../styles/Dropdown.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Button } from 'react-bootstrap';
 import { Offcanvas } from 'react-bootstrap';
+import BarsIcon from './BarsIcon';
+import CrossIcon from './CrossIcon';
 
 
 
@@ -41,9 +42,9 @@ function DropDown() {
 
     return (
         <div className='dropdown-container'>
-            <Button variant="primary" onClick={handleShow}>
-                {<FontAwesomeIcon icon={show ? faTimes : faBars} id='icon'/>}
-            </Button>
+            <button type='button' onClick={handleShow} className='menu-button'>
+                {show ? <CrossIcon/> : <BarsIcon/>}
+            </button>
             <Offcanvas 
             className='sidebar' 
             show={show} 
@@ -53,11 +54,16 @@ function DropDown() {
             scroll={true}>
                 <Offcanvas.Body>
                 <div className='dropdown-links-container'>
-                        <Link className='dropdown-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
-                        <Link className='dropdown-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
-                        <Link className='dropdown-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
-                        <Link className='dropdown-link' as={Link} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
-                    </div>
+                    {/* <Link className='dropdown-link winter' as={Link} to="/category/Vinter" onClick={handleItemClick}>Vinter</Link>
+                    <Link className='dropdown-link spring' as={Link} to="/category/Vår" onClick={handleItemClick}>Vår</Link>
+                    <Link className='dropdown-link summer' as={Link} to="/category/Sommar" onClick={handleItemClick}>Sommar</Link>
+                    <Link className='dropdown-link autumn' as={Link} to="/category/Höst" onClick={handleItemClick}>Höst</Link> */}
+
+                    <Link className='dropdown-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
+                    <Link className='dropdown-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
+                    <Link className='dropdown-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
+                    <Link className='dropdown-link' as={Link} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
+                </div>
                     <DropdownButton 
                     id='season-button' 
                     show={dropdownOpen} 

@@ -51,10 +51,6 @@
     background-color: rgb(255, 255, 255);
 }
 
-.dropdown-container Button{
-    background-color: white;
-}
-
 .dropdown-item:hover {
     font-weight: 600;
     background-color: rgb(235, 212, 215); 
@@ -67,25 +63,6 @@
 }
 .dropdown-toggle::after {
     display: none;
-}
-
-.dropdown-container Button{
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    margin: 5px;
-    padding: 0;
-    color: rgb(0, 0, 0);
-    width: 40px;
-    height: 40px;
-    transition: background-color 0.2s ease;
-}
-.dropdown-container Button:hover{
-    background-color: #e9c0db;
-}
-.dropdown-container Button:active{
-    background-color: inherit;
 }
 
 #icon{
@@ -140,6 +117,57 @@
 
 .dropdown-link:hover{
     font-weight: 700;
+}
+
+/* .winter{
+    background: linear-gradient(rgba(173, 216, 230, 0.795), rgba(0, 0, 255, 0.795));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.spring{
+    background: linear-gradient(rgba(0, 128, 0, 0.795), rgba(0, 255, 0, 0.795));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.summer{
+    background: linear-gradient(rgba(255, 0, 0, 0.795), rgba(255, 255, 0, 0.795));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.autumn{
+    background: linear-gradient(rgba(255, 145, 0, 0.795), rgba(88, 52, 28, 0.795));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.menu-button{
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.2s ease;
+    stroke: #000000;
+    display: flex;
+}
+.menu-button:hover{
+    background-color: #e9c0db;
+}
+.menu-button:hover svg{
+    stroke: #ffffff;
+    fill: white;
 }
 
 #arrow{
