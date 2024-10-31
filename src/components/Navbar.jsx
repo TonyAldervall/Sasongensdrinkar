@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from './searchbar';
+import SearchBar from './SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { NavLink, useParams } from 'react-router-dom';
