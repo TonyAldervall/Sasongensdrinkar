@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { NavLink, useParams } from 'react-router-dom';
 import logo from '../styles/loggan.png';
-import DropDown from './Dropdown';
+import SideBar from './SideBar';
 import { fetchData } from '../utils/fetch';
 
 function Navbar() {
@@ -52,7 +52,7 @@ function Navbar() {
                     <img className='logo' src={logo} alt="Logo" />
                 </NavLink>
                 <SearchBar />
-                <DropDown />
+                <SideBar />
             </div>
         </div>
         <div className='navbar-bottom-outer'>

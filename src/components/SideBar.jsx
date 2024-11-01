@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Dropdown.css';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Offcanvas } from 'react-bootstrap';
 import BarsIcon from './BarsIcon';
 import CrossIcon from './CrossIcon';
 
 
 
-function DropDown() {
+function SideBar() {
     const [show, setShow] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const handleShow = () => {
         if(show){
@@ -32,12 +27,7 @@ function DropDown() {
     }
 
     const handleItemClick = () => {
-
         handleClose();
-    }
-
-    const toggleDropdown = () => {
-        setDropdownOpen(prev => !prev);
     }
 
     return (
@@ -65,4 +55,4 @@ function DropDown() {
     );
 }
 
-export default DropDown;
+export default SideBar;
