@@ -55,7 +55,7 @@
     
 }
 
-.dropdown-container {
+.sidebar-container {
     display: flex;
     position: relative;
 }
@@ -103,7 +103,7 @@
     margin-top: 10px;
 }
 
-.dropdown-link{
+.sidebar-link{
     display: flex;
     justify-content: start;
     margin: 10px;
@@ -112,10 +112,11 @@
     text-decoration: none;
     color: inherit;
     font-size: 2rem;
+    transition: font-weight 0.1s ease-out;
 }
 
-.dropdown-link:hover{
-    font-weight: 700;
+.sidebar-link:hover{
+    font-weight: 600;
 }
 
 .menu-button{
