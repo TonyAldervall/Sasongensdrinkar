@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <Search />,
   },
   {
-    path: "/toplist",
+    path: "/topplista",
     element: <Toplist />,
   }
 ]);

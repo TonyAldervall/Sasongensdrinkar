@@ -44,7 +44,7 @@ function SideBar() {
             scroll={true}>
                 <Offcanvas.Body>
                 <div className='sidebar-links-container'>
-                    <Link className='sidebar-link' as={Link} to="/toplist" onClick={handleItemClick}>Topplista</Link>
+                    <Link className='sidebar-link' as={Link} to="/topplista" onClick={handleItemClick}>Topplista</Link>
                     <Link className='sidebar-link' as={Link} to="/category/cocktail" onClick={handleItemClick}>Cocktails</Link>
                     <Link className='sidebar-link' as={Link} to="/category/vodka" onClick={handleItemClick}>Vodka</Link>
                     <Link className='sidebar-link' as={Link} to="/category/klassisk" onClick={handleItemClick}>Klassisk</Link>
