@@ -39,6 +39,17 @@
     stroke: #000000;
 }
 
+.logo-name{
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
 .search-container {
     flex-grow: 1;
     display: flex;
@@ -70,5 +81,21 @@
 @media (min-width: 655px) {
     .search-input {
         width: 300px;
+    }
+
+    .logo-name{
+        font-size: 1.6rem;
+    }
+    .hide-on-mobile{
+        display: flex;
+    }
+}
+
+@media (min-width: 970px) {
+    .logo-name{
+        font-size: 2rem;
+    }
+    .hide-on-mobile{
+        display: flex;
     }
 }

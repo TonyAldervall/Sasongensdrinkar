@@ -40,6 +40,7 @@
 }
 
 .navbar-bottom-button{
+    margin: 0 2px 0 2px;
     font-family: "Raleway", sans-serif;
     background-color: rgb(255, 255, 255);
     padding: 5px 10px 5px 10px;
@@ -60,18 +61,11 @@
     padding-left: 5px;
 }
 
-.name{
-    padding-left: 3px;
-    margin-top: 10px;
-    height: 40px;
-}
-
 .logo {
     height: 45px;
     width: 50px;
     border-radius: 10px;
 }
-
 
 .navlink {
     color: white;
