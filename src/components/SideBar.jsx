@@ -14,16 +14,13 @@ function SideBar() {
     const handleShow = () => {
         if(show){
             setShow(false);
-            setDropdownOpen(false);
         }else{
             setShow(true);
-            setDropdownOpen(false);
         }
     }
         
     const handleClose = () => {
         setShow(false);
-        setDropdownOpen(false);
     }
 
     const handleItemClick = () => {

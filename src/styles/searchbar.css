@@ -20,7 +20,7 @@
     transition: stroke 0.2s ease;
 }
 .search-button:hover{
-    background-color: #e9c0db;
+    background-color: #d4adb9;
 
 }
 .search-button:hover svg{
@@ -37,6 +37,17 @@
 }
 .search-button-open:hover svg{
     stroke: #000000;
+}
+
+.logo-name{
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+.hide-on-mobile {
+    display: none;
 }
 
 .search-container {
@@ -70,5 +81,21 @@
 @media (min-width: 655px) {
     .search-input {
         width: 300px;
+    }
+
+    .logo-name{
+        font-size: 1.6rem;
+    }
+    .hide-on-mobile{
+        display: flex;
+    }
+}
+
+@media (min-width: 970px) {
+    .logo-name{
+        font-size: 2rem;
+    }
+    .hide-on-mobile{
+        display: flex;
     }
 }

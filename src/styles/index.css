@@ -1,8 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,11 +12,11 @@
 }
 
 body {
+  font-family: "Poiret One", sans-serif;
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  text-align: center; 
-  
+  text-align: center;
 }
 
 .content-wrapper{
@@ -42,7 +40,7 @@ body.vår {
 }
 
 body.sommar {
-  background-image: url(henry-be-IicyiaPYGGI-unsplash.jpg); 
+  background-image: url(summer.jpg); 
   background-size: cover;
 }
 

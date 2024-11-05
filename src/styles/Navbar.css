@@ -20,7 +20,7 @@
 
 .navbar-bottom-outer{
     width: 100%;
-    background-color: rgb(255, 194, 201);
+    background-color:  rgb(232, 197, 205);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -40,6 +40,8 @@
 }
 
 .navbar-bottom-button{
+    margin: 0 2px 0 2px;
+    font-family: "Raleway", sans-serif;
     background-color: rgb(255, 255, 255);
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
@@ -50,7 +52,7 @@
 }
 
 .navbar-bottom-button:hover{
-    background-color: #fface3;
+    background-color: #d4adb9;
     color: white;
 }
 
@@ -60,8 +62,8 @@
 }
 
 .logo {
-    height: 55px;
-    width: 250px;
+    height: 45px;
+    width: 50px;
     border-radius: 10px;
 }
 

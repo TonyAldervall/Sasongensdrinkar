@@ -11,6 +11,7 @@
     min-width: fit-content;
     max-height: fit-content;
     padding: 10px;
+    font-family: "Raleway", sans-serif;
 }
 
 .header{
@@ -70,6 +71,7 @@
     flex-direction: column;
     text-align: left;
     margin: 10px;
+    font-family: "Raleway", sans-serif;
 }
 
 .instructions ul{
@@ -105,7 +107,7 @@ span{
     margin-right: 10px;
     width: 16px;
     height: 16px;
-    accent-color: rgb(184, 231, 193);
+    accent-color: #d4adb9;
     cursor: pointer;
 }
 
@@ -143,10 +145,11 @@ li input[type="checkbox"]:checked + span{
 }
 
 .MuiRating-icon.MuiRating-iconFilled{
-    color: rgb(234, 185, 191);;
+    color: #d4adb9;
 }
 
 .MuiTypography-root.MuiTypography-body1{
+    font-family: "Raleway", sans-serif;
     margin-left: 10px;
     margin-top: 1px;
     color: black;
