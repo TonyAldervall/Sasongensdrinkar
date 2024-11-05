@@ -135,7 +135,7 @@
     display: flex;
 }
 .menu-button:hover{
-    background-color: #e9c0db;
+    background-color: #d4adb9;
 }
 .menu-button:hover svg{
     stroke: #ffffff;
@@ -151,3 +151,4 @@
 .offcanvas-end.offcanvas-toggling{
     display: none;
 }
+
