@@ -54,6 +54,7 @@
 }
 
 .recipe-description {
+    font-family: "Raleway", sans-serif;
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
