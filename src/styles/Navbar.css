@@ -20,7 +20,7 @@
 
 .navbar-bottom-outer{
     width: 100%;
-    background-color: rgb(255, 194, 201);
+    background-color:  rgb(232, 197, 205);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -50,7 +50,7 @@
 }
 
 .navbar-bottom-button:hover{
-    background-color: #fface3;
+    background-color: #d4adb9;
     color: white;
 }
 
