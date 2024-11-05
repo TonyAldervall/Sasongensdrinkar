@@ -7,6 +7,8 @@ import Recipe from './Recipe.jsx';
 import Search from './Search.jsx';
 import Toplist from './Toplist.jsx';
 import '../styles/index.css';
+import "@fontsource/raleway";
+import "@fontsource/poiret-one";
 
 const router = createBrowserRouter([
   {
