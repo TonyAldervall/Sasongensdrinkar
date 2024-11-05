@@ -3,7 +3,8 @@ import SearchBar from './SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { NavLink, useParams } from 'react-router-dom';
-import logo from '../styles/loggan.png';
+import logo from '../styles/drink.png';
+import companyName from '../styles/companyName.png';
 import SideBar from './SideBar';
 import { fetchData } from '../utils/fetch';
 
@@ -50,6 +51,7 @@ function Navbar() {
             <div className='navbar' >
                 <NavLink to='/' className='home-button'>
                     <img className='logo' src={logo} alt="Logo" />
+                    <img className='name' src={companyName} alt="name" />
                 </NavLink>
                 <SearchBar />
                 <SideBar />
