@@ -112,11 +112,11 @@
     text-decoration: none;
     color: inherit;
     font-size: 2rem;
-    transition: font-weight 0.1s ease-out;
+    transition: color 0.2s ease;
 }
 
 .sidebar-link:hover{
-    font-weight: 600;
+    color: #ffffff;
 }
 
 .menu-button{
