@@ -31,7 +31,7 @@ const DrinkResultSection = ({ category, searchTerm}) => {
     return (
         <div className="drink-result-section">
             {filteredData.length === 0 ? (
-                <p className='no-match'>No matches were found for search: "{searchTerm}".</p>
+                <p className='no-match'>Ingen match hittad för sökningen: "{searchTerm}".</p>
             ) : (
                 <DrinkCards data={filteredData}/>
             )}
